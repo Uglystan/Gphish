@@ -307,17 +307,7 @@ files = [
 [package.extras]
 brotli = ["Brotli"]
 
-[[package]]
-name = "zxcvbn"
-version = "4.4.28"
-description = ""
-optional = false
-python-versions = "*"
-files = [
-    {file = "zxcvbn-4.4.28.tar.gz", hash = "sha256:151bd816817e645e9064c354b13544f85137ea3320ca3be1fb6873ea75ef7dc1"},
-]
-
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.8,<4"
-content-hash = "39fbc41d65ff2b40e4a5c9c71e6828f3a8765c72f77e87807b063486198615c6"
+content-hash = "4969e0912e1184017cf43a44ef01baff9b193e565137ec028b3981965fc17ef7"
