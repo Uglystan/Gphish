@@ -11,20 +11,6 @@
 
 ## Fast Installation Using docker
 
-- Pull created image
-  - Install [Docker](https://www.docker.com/products/docker-desktop/)
-  - Pull googlephish image
-
-      ```bash
-      docker pull dmdhrumilmistry/googlephish
-      ```
-
-  - run docker image
-
-      ```bash
-      docker run -d -p 8000:8000 dmdhrumilmistry/googlephish -e
-      ```
-
 - Build Image and run using build command
 
     ```bash
@@ -47,21 +33,9 @@ If you have build the dockerfile with no arguments, the default credentials are 
 * Username : `admin`
 * Password : `G00g13P#15#23`
 
-- Using Docker Compose
-
-   ```bash
-    docker-compose up
-   ```
-  
-  > :warning: Doesn't work yet
-
-## Installation
+## Installation without docker
 
 - Clone/Download repo
-
-    ```bash
-    git clone https://github.com/dmdhrumilmistry/GooglePhish.git
-    ```
 
 - Create virtual environment
 
@@ -189,6 +163,11 @@ python3 manage.py runserver
 > ```
 > https://meet.google.com/linkredirect?dest=your_link
 > ```
+
+## Deploy
+
+- 
+
 
 ## Project Maintainer
 
