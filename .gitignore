@@ -217,7 +217,7 @@ cython_debug/
 # End of https://www.toptal.com/developers/gitignore/api/python,django
 
 # custom files
-serve_static
+# serve_static
 *.sqlite3
 cloned
 *migrations*
