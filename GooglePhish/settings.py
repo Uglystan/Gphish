@@ -36,11 +36,14 @@ DEBUG = True if environ.get('DEBUG','False').lower() == 'true' else False
 # CSRF_TRUSTED_ORIGINS_VARIABLE = [origin.strip() for origin in environ.get('CSRF_TRUSTED_ORIGINS','https://dmdhrumilmistry.github.io').split(',')]
 ALLOWED_HOSTS = [
     'b91c-185-64-149-75.ngrok-free.app',
+    'gphish.onrender.com',
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    '*'
 ]
 CSRF_TRUSTED_ORIGINS = [
     'https://b91c-185-64-149-75.ngrok-free.app',
+    'https://gphish.onrender.com',
     'https://your-domain.ngrok-free.app',
     'https://domain.localhost.run',
 ]
