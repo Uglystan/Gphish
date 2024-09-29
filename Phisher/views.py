@@ -93,7 +93,7 @@ def signin(request):
                     validate_email(email)
                     return render(request, 'passwd.html', {'email': email})
                 except ValidationError:
-                    pass
+                    return JsonResponse({'valid': False})
 
         return index(request)
     except Exception as e:

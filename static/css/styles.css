@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: "Google Sans", "roboto", "Noto Sans Myanmar UI", arial, sans-serif;
-  /* font-family: "Roboto", sans-serif; */
   box-sizing: border-box;
 }
 
@@ -18,7 +17,6 @@
   height: 100vh;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   flex-direction: column;
   min-height: 500px;
 }
@@ -27,7 +25,6 @@
   height: 500px;
   width: 475px;
   border-radius: 8px;
-  /* border: 1px solid var(--border-card); */
   display: flex;
   flex-direction: column;
   padding: 26px 48.5px 0px;
@@ -131,15 +128,14 @@
 .footer {
   display: flex;
   align-items: flex-start;
-  /* justify-content: space-between; */
   padding-top: 24px;
   font-size: 12px;
   width: 448px;
   color: var(--p);
-  padding-left: 0; /* Assurez-vous qu'il n'y a pas de padding gauche */
-  padding-right: 0; /* Assurez-vous qu'il n'y a pas de padding droit */
-  margin-left: 0; /* Retirez toutes les marges à gauche */
-  margin-right: 0; /* Retirez toutes les marges à droite */
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .footer select {
@@ -248,15 +244,24 @@ input:focus + .placeholder-text .text{
     transition: transform 0.2s ease-out, font-size 0.2s ease-out, background-color 0.2s ease-out, color 0.2s ease-out;
 }
 
-input:focus + .placeholder-text .text, :not(input[value=""]) + .placeholder-text .text{
-    background-color: white;
-    color: black;
-    transform: translate(0, -170%);
+input.has-value + .placeholder-text .text {
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  margin-top: -8px;
+  transform: translate(0, -170%);
+  border-color: #1a73e8;
+  color: #1a73e8;
 }
 
-input:focus + .placeholder-text .text{
+input:focus + .placeholder-text .text,
+input.has-value + .placeholder-text .text {
     border-color: #1a73e8;
     color: #1a73e8;
+}
+
+input:not(:focus).has-value + .placeholder-text .text {
+  color: #1F1F1F;
 }
 
 @font-face {
@@ -275,11 +280,13 @@ input.key {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
+
 .aCayab {
     height: 32px;
     margin-top: 8px;
     padding-top: 10px !important;
 }
+
 .jXeDnc:not(.tmR25c) {
     text-align: center;
 }
@@ -287,18 +294,22 @@ input.key {
 .HnRr5d.cd29Sd {
     padding-left: 5px;
 }
+
 .HnRr5d.iiFyne {
     padding-right: 7px;
 }
+
 .H2SoFe *, .H2SoFe *:before, .H2SoFe *:after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
+
 .HnRr5d {
     -webkit-border-radius: 16px;
     border-radius: 16px;
     padding: 0 15px 0 15px;
 }
+
 .YZrg6 {
     -webkit-align-items: center;
     align-items: center;
@@ -322,6 +333,7 @@ input.key {
     height: 20px;
     margin-right: 8px;
 }
+
 .qQWzTd {
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -334,17 +346,13 @@ input.key {
   width: 100%;
 }
 
-
-
-  /* Cacher l'élément natif */
-  .custom-checkbox {
+.custom-checkbox {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-  }
+}
 
-  /* Créer un style personnalisé pour la case à cocher */
-  .custom-checkbox-label {
+.custom-checkbox-label {
     display: inline-block;
     width: 18px;
     height: 18px;
@@ -352,10 +360,9 @@ input.key {
     border-radius: 2px;
     position: relative;
     cursor: pointer;
-  }
+}
 
-  /* Style de la coche */
-  .custom-checkbox-label:after {
+.custom-checkbox-label:after {
     content: "";
     position: absolute;
     display: none;
@@ -366,15 +373,27 @@ input.key {
     border: solid white;
     border-width: 0 2px 2px 0;
     transform: rotate(45deg);
-  }
+}
 
-  /* Quand la case à cocher est cochée, on affiche la coche */
-  .custom-checkbox:checked + .custom-checkbox-label:after {
+.custom-checkbox:checked + .custom-checkbox-label:after {
     display: block;
-  }
+}
 
-  /* Style quand la case est cochée */
-  .custom-checkbox:checked + .custom-checkbox-label {
+.custom-checkbox:checked + .custom-checkbox-label {
     background-color: #0b57d0;
     border-color: #0b57d0;
-  }
+}
+
+#error-message {
+    color: #b3261e;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    z-index: -1;
+    display: none;
+}
+
+#error-message svg {
+  vertical-align: middle;
+  margin-right: 8px;
+}
