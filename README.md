@@ -164,35 +164,9 @@ python3 manage.py runserver
 > https://meet.google.com/linkredirect?dest=your_link
 > ```
 
-## Deploy
-
-```bash
-    python3 -m venv env
-    source env/bin/activate
-    python3 -m pip install poetry
-    python3 manage.py makemigrations
-    python3 manage.py migrate
-    python3 manage.py createsuperuser
-    python3 manage.py collectstatic
-    python3 manage.py runserver
-```
-- Ajouter le nom de domaine dans ALLOWED_HOST -> setting.py ('b91c-185-64-149-75.ngrok-free.app')
-- Ajouter le nom de domaine dans CSRF_TRUSTED_ORIGINS -> setting.py ('https://b91c-185-64-149-75.ngrok-free.app')
-- Créer un Procfile avec <web: python manage.py runserver 0.0.0.0:$PORT>
-- Créer un fichier release :
-  ```bash
-      #!/bin/bash
-      python manage.py migrate
-      python manage.py collectstatic --noinput
-  ```
-
-## Project Maintainer
-
-- [dmdhrumilmistry](https://github.com/dmdhrumilmistry)
-
 ## Contributors
 
-[Contributors List](https://github.com/dmdhrumilmistry/GooglePhish/graphs/contributors)
+- Original projects from [dmdhrumilmistry](https://github.com/dmdhrumilmistry)
 
 ### Have any Ideas 💡 or issue
 
